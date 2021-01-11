@@ -31,119 +31,119 @@
     <div class="container">
       <!-- Timeblocks go here -->
       <div class="row">
-        <div class="col-2" id=AM9>
+        <div class="col-2">
           <p>9AM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=AM9>
+          <p id=task-data></p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info"
+          <button id="save-task-9" class="btn btn-block btn-info"
           img= "./unamed.png"> Save Button </button>
         </div>
       </div>
       
        <div class="row">
-        <div class="col-2" id=AM10>
+        <div class="col-2">
           <p>10AM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=AM10>
+          <p id=task-data></p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info border-top border-left" 
+          <button id="save-task-10" class="btn btn-block btn-info border-top border-left" 
           img= "./unamed.png"> Save Button </button>
         </div>
       </div>
 
        <div class="row">
-        <div class="col-2" id=AM11>
+        <div class="col-2">
           <p>11AM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=AM11>
+          <p id=task-data></p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info"
+          <button id="save-task-11" class="btn btn-block btn-info"
           img= "./unamed.png"> Save Button </button>
         </div>
       </div>
 
        <div class="row">
-        <div class="col-2" id=PM12>
+        <div class="col-2">
           <p>12PM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=PM12>
+          <p id=task-data></p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info"
+          <button id="save-task-12" class="btn btn-block btn-info"
           img= "./unamed.png"> Save Button </button>
         </div>
       </div>
 
        <div class="row">
-        <div class="col-2" id=PM1>
+        <div class="col-2">
           <p>1PM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=PM1>
+          <p id=task-data></p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info"
+          <button id="save-task-1" class="btn btn-block btn-info"
           img= "./unamed.png"> Save Button </button>
         </div>
       </div>
 
        <div class="row">
-        <div class="col-2" id=PM2>
+        <div class="col-2">
           <p>2PM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=PM2>
+          <p id=task-data></p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info"
+          <button id="save-task-2" class="btn btn-block btn-info"
           img= "./unamed.png"> Save Button </button>
         </div>
       </div>
         
        <div class="row">
-        <div class="col-2" id=PM3>
+        <div class="col-2">
           <p>3PM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=PM3>
+          <p id=task-data></p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info"
+          <button id="save-task-3" class="btn btn-block btn-info"
           img= "./unamed.png"> Save Button </button>
         </div>
       </div>
 
        <div class="row">
-        <div class="col-2" id=PM4>
+        <div class="col-2">
           <p>4PM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=PM4>
+          <p id=task-data> </p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info"
+          <button id="save-task-4" class="btn btn-block btn-info"
           img= "./unamed.png"> Save Button </button>
         </div>
       </div>
 
        <div class="row">
-        <div class="col-2" id=PM5>
+        <div class="col-2">
           <p>5PM</p>
         </div>
-        <div class="col-8">
-          <p>Event</p>
+        <div class="col-8 hourlyTask border border-white" id=PM5 > 
+        <!-- contenteditable="true"> -->
+          <p id=task-data> </p>
         </div>
         <div class="col-2">
-          <button id="save-task" class="btn btn-block btn-info"
-          img= "./unamed.png"> Save Button </button>
+          <button id="save-task-5" class="btn btn-block btn-info">Save Button </button>
         </div>
       </div>
 
@@ -151,25 +151,174 @@
 
     </div>
 
-    <script type="text/javascript">
-    //Display current time in id=currentDay
-    let [month, date, year]  = new Date().toLocaleDateString("en-US").split("/")
-    let fmtDate = (month + '/' + date + '/' + year);
-    let fmtDay = moment(fmtDate,'MM/DD/YYY');
-    currentDay= fmtDay.format('dddd, MMMM Do') ;
-    
-    currentDay.setAttribute
-
-    // If currentTime is less than time ID than eventBox is GREEN
-    // if currentTime = timeID then eventBox is RED
-    // else eventBox is GREY
-
-
-    //Enable Save button with local storage
-
-    </script>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript">
+      //Display current time in id=currentDay
+      let [month, date, year]  = new Date().toLocaleDateString("en-US").split("/")
+      let fmtDate = (month + '/' + date + '/' + year);
+      let fmtDay = moment(fmtDate,'MM/DD/YYY');
+      currentDay= fmtDay.format('dddd, MMMM Do') ;
+  
+      let displayDay= document.getElementById('currentDay');
+      displayDay.textContent = currentDay;
+  
+      // Color hour box based on current time
+      let [hour, minute, second] = new Date().toLocaleTimeString("en-GB").split(/:| /)
+      function currentTime(){
+
+        if (hour == '9'){
+          document.getElementById('AM9').classList.add('bg-danger');
+        } else if(hour < moment().hour(9)){
+          document.getElementById('AM9').classList.add('bg-light');
+        } else {
+          document.getElementById('AM9').classList.add('bg-success');
+        }
+
+        if (hour == '10'){
+          document.getElementById('AM10').classList.add('bg-danger');
+        } else if(hour < moment().hour(10)){
+          document.getElementById('AM10').classList.add('bg-light');
+        } else {
+          document.getElementById('AM10').classList.add('bg-success');
+        }
+
+        if (hour == '11'){
+          document.getElementById('AM11').classList.add('bg-danger');
+        } else if(hour < moment().hour(19)){
+          document.getElementById('AM11').classList.add('bg-light');
+        } else {
+          document.getElementById('AM11').classList.add('bg-success');
+        }
+
+        if (hour == '12'){
+          document.getElementById('PM12').classList.add('bg-danger');
+        } else if(hour < moment().hour(12)){
+          document.getElementById('PM12').classList.add('bg-light');
+        } else {
+          document.getElementById('PM12').classList.add('bg-success');
+        }
+
+        if (hour == '13'){
+          document.getElementById('PM1').classList.add('bg-danger');
+        } else if(hour < moment().hour(1)){
+          document.getElementById('PM1').classList.add('bg-light');
+        } else {
+          document.getElementById('PM1').classList.add('bg-success');
+        }
+
+        if (hour == '14'){
+          document.getElementById('PM2').classList.add('bg-danger');
+        } else if(hour < moment().hour(2)){
+          document.getElementById('PM2').classList.add('bg-light');
+        } else {
+          document.getElementById('PM2').classList.add('bg-success');
+        }
+
+
+        if (hour == '12'){
+          document.getElementById('PM3').classList.add('bg-danger');
+        } else if(hour < moment().hour(3)){
+          document.getElementById('PM3').classList.add('bg-light');
+        } else {
+          document.getElementById('PM3').classList.add('bg-success');
+        }
+
+        if (hour == '16'){
+          document.getElementById('PM4').classList.add('bg-danger');
+        } else if(hour < moment().hour(4)){
+          document.getElementById('PM4').classList.add('bg-light');
+        } else {
+          document.getElementById('PM4').classList.add('bg-success');
+        }
+
+        if (hour == '17'){
+          document.getElementById('PM5').classList.add('bg-danger');
+        } else if(hour < moment().hour(5)){
+          document.getElementById('PM5').classList.add('bg-light');
+        } else {
+          document.getElementById('PM5').classList.add('bg-success');
+        }
+
+      };
+      currentTime();
+
+      //Edit text box for each hour
+      $(".hourlyTask").on("click", "p", function() {
+      var text=$(this)
+        .text() 
+        .trim();
+      console.log(text);
+      
+      var textInput= $("<textarea>")
+       // .addClass("form-control")
+        .val(text);
+      $(this).replaceWith(textInput)
+      textInput.trigger("focus");
+
+    });
+
+    $(".hourlyTask").on("blur","textarea", function(){
+      var text = $(this)
+        .val()
+        .trim();
+
+      var taskP = $("<p>")
+       // .addClass("m-1")
+        .text(text);
+
+      $(this).replaceWith(taskP);
+    });
+  
+      //Enable Save button with local storage
+      var list = JSON.parse(localStorage.getItem('todolist')) || [];
+
+      // Renders our to-dos to the page
+      function renderSchedule(list) {
+        // Empties out the html
+        $('#PM5').empty();
+
+        // Iterates over the 'list'
+        for (var i = 0; i < list.length; i++) {
+          // Creates a new variable 'toDoItem' that will hold a "<p>" tag
+          // Sets the `list` item's value as text of this <p> element
+          var toDoItem = $('<p>');
+            //$('#PM5').text(list[i]);
+          toDoItem.text(list[i]);
+
+          // Adds 'toDoItem' to the To-Do List div
+          $('#PM5').append(toDoItem);
+        }
+      }
+
+
+      $('#save-task-5').on('click', function(event) {
+       event.preventDefault();
+
+        // Get the to-do "value" from the textbox and store it as a variable using `.val()` and `.trim()`
+        // YOUR CODE HERE
+        var textEntry = $('#PM5').text().trim();
+
+        // Add the new to-do to our local 'list' variable
+        // YOUR CODE HERE
+        list.push(textEntry);
+
+        // Update the to-dos on the page
+        // YOUR CODE HERE
+        renderSchedule(list);
+
+        // Save the to-dos into localStorage
+        // We need to use JSON.stringify to turn the list from an array into a string
+        localStorage.setItem('todolist',JSON.stringify(list));
+      
+        console.log(localStorage);
+        // Clear the textbox when done using `.val()`
+        $('#PM5').text('');
+      });
+
+      renderSchedule(list);
+  
+      </script>
+
   </body>
 </html>
