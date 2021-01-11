@@ -34,8 +34,7 @@
         <div class="col-2">
           <p>9AM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=AM9>
-          <p id=task-data></p>
+        <div class="col-8 hourlyTask border border-white" id=AM9 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-9" class="btn btn-block btn-info"
@@ -47,8 +46,7 @@
         <div class="col-2">
           <p>10AM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=AM10>
-          <p id=task-data></p>
+        <div class="col-8 hourlyTask border border-white" id=AM10 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-10" class="btn btn-block btn-info border-top border-left" 
@@ -60,8 +58,7 @@
         <div class="col-2">
           <p>11AM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=AM11>
-          <p id=task-data></p>
+        <div class="col-8 hourlyTask border border-white" id=AM11 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-11" class="btn btn-block btn-info"
@@ -73,8 +70,7 @@
         <div class="col-2">
           <p>12PM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=PM12>
-          <p id=task-data></p>
+        <div class="col-8 hourlyTask border border-white" id=PM12 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-12" class="btn btn-block btn-info"
@@ -86,8 +82,7 @@
         <div class="col-2">
           <p>1PM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=PM1>
-          <p id=task-data></p>
+        <div class="col-8 hourlyTask border border-white" id=PM1 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-1" class="btn btn-block btn-info"
@@ -99,8 +94,7 @@
         <div class="col-2">
           <p>2PM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=PM2>
-          <p id=task-data></p>
+        <div class="col-8 hourlyTask border border-white" id=PM2 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-2" class="btn btn-block btn-info"
@@ -112,8 +106,7 @@
         <div class="col-2">
           <p>3PM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=PM3>
-          <p id=task-data></p>
+        <div class="col-8 hourlyTask border border-white" id=PM3 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-3" class="btn btn-block btn-info"
@@ -125,8 +118,7 @@
         <div class="col-2">
           <p>4PM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=PM4>
-          <p id=task-data> </p>
+        <div class="col-8 hourlyTask border border-white" id=PM4 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-4" class="btn btn-block btn-info"
@@ -138,9 +130,7 @@
         <div class="col-2">
           <p>5PM</p>
         </div>
-        <div class="col-8 hourlyTask border border-white" id=PM5 > 
-        <!-- contenteditable="true"> -->
-          <p id=task-data> </p>
+        <div class="col-8 hourlyTask border border-white" id=PM5 contenteditable="true">
         </div>
         <div class="col-2">
           <button id="save-task-5" class="btn btn-block btn-info">Save Button </button>
@@ -270,54 +260,135 @@
       $(this).replaceWith(taskP);
     });
   
+
       //Enable Save button with local storage
-      var list = JSON.parse(localStorage.getItem('todolist')) || [];
-
       // Renders our to-dos to the page
-      function renderSchedule(list) {
-        // Empties out the html
-        $('#PM5').empty();
-
-        // Iterates over the 'list'
-        for (var i = 0; i < list.length; i++) {
-          // Creates a new variable 'toDoItem' that will hold a "<p>" tag
-          // Sets the `list` item's value as text of this <p> element
-          var toDoItem = $('<p>');
-            //$('#PM5').text(list[i]);
-          toDoItem.text(list[i]);
-
-          // Adds 'toDoItem' to the To-Do List div
-          $('#PM5').append(toDoItem);
+      function renderSchedule9() {
+          let savedText9= JSON.parse(localStorage.getItem('todoitem9'))
+          $('#AM9').text(savedText9);
         }
-      }
 
-
-      $('#save-task-5').on('click', function(event) {
+        $('#save-task-9').on('click', function(event) {
        event.preventDefault();
 
-        // Get the to-do "value" from the textbox and store it as a variable using `.val()` and `.trim()`
-        // YOUR CODE HERE
-        var textEntry = $('#PM5').text().trim();
+        var textEntry9 = $('#AM9').text().trim();
+        localStorage.setItem('todoitem9',JSON.stringify(textEntry9));
+            });
 
-        // Add the new to-do to our local 'list' variable
-        // YOUR CODE HERE
-        list.push(textEntry);
+      renderSchedule9();
 
-        // Update the to-dos on the page
-        // YOUR CODE HERE
-        renderSchedule(list);
+      function renderSchedule10() {
+          let savedText10= JSON.parse(localStorage.getItem('todoitem10'))
+          $('#AM10').text(savedText10);
+        }
 
-        // Save the to-dos into localStorage
-        // We need to use JSON.stringify to turn the list from an array into a string
-        localStorage.setItem('todolist',JSON.stringify(list));
-      
-        console.log(localStorage);
-        // Clear the textbox when done using `.val()`
-        $('#PM5').text('');
-      });
+        $('#save-task-10').on('click', function(event) {
+       event.preventDefault();
 
-      renderSchedule(list);
-  
+        var textEntry10 = $('#AM10').text().trim();
+        localStorage.setItem('todoitem10',JSON.stringify(textEntry10));
+            });
+
+      renderSchedule10();
+
+      function renderSchedule11() {
+          let savedText11= JSON.parse(localStorage.getItem('todoitem11'))
+          $('#AM11').text(savedText11);
+        }
+
+        $('#save-task-11').on('click', function(event) {
+       event.preventDefault();
+
+        var textEntry11 = $('#AM11').text().trim();
+        localStorage.setItem('todoitem11',JSON.stringify(textEntry11));
+            });
+
+      renderSchedule11();
+
+      function renderSchedule12() {
+          let savedText12= JSON.parse(localStorage.getItem('todoitem12'))
+          $('#PM12').text(savedText12);
+        }
+
+        $('#save-task-12').on('click', function(event) {
+       event.preventDefault();
+
+        var textEntry12 = $('#PM12').text().trim();
+        localStorage.setItem('todoitem12',JSON.stringify(textEntry12));
+            });
+
+      renderSchedule12();
+
+      function renderSchedule1() {
+          let savedText1= JSON.parse(localStorage.getItem('todoitem1'))
+          $('#PM1').text(savedText1);
+        }
+
+        $('#save-task-1').on('click', function(event) {
+       event.preventDefault();
+
+        var textEntry1 = $('#PM1').text().trim();
+        localStorage.setItem('todoitem1',JSON.stringify(textEntry1));
+            });
+
+      renderSchedule1();
+
+      function renderSchedule2() {
+          let savedText2= JSON.parse(localStorage.getItem('todoitem2'))
+          $('#PM2').text(savedText2);
+        }
+
+        $('#save-task-2').on('click', function(event) {
+       event.preventDefault();
+
+        var textEntry2 = $('#PM2').text().trim();
+        localStorage.setItem('todoitem2',JSON.stringify(textEntry2));
+            });
+
+      renderSchedule2();
+
+      function renderSchedule3() {
+          let savedText3= JSON.parse(localStorage.getItem('todoitem3'))
+          $('#PM3').text(savedText3);
+        }
+
+        $('#save-task-3').on('click', function(event) {
+       event.preventDefault();
+
+        var textEntry3 = $('#PM3').text().trim();
+        localStorage.setItem('todoitem3',JSON.stringify(textEntry3));
+            });
+
+      renderSchedule3();
+
+      function renderSchedule4() {
+          let savedText= JSON.parse(localStorage.getItem('todoitem4'))
+          $('#PM4').text(savedText);
+        }
+
+        $('#save-task-4').on('click', function(event) {
+       event.preventDefault();
+
+        var textEntry4 = $('#PM4').text().trim();
+        localStorage.setItem('todoitem4',JSON.stringify(textEntry4));
+            });
+
+      renderSchedule4();
+
+      function renderSchedule5() {
+          let savedText5= JSON.parse(localStorage.getItem('todoitem5'))
+          $('#PM5').text(savedText5);
+        }
+
+        $('#save-task-5').on('click', function(event) {
+       event.preventDefault();
+
+        var textEntry5 = $('#PM5').text().trim();
+        localStorage.setItem('todoitem5',JSON.stringify(textEntry5));
+            });
+
+      renderSchedule5();
+
       </script>
 
   </body>
