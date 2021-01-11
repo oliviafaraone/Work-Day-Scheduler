@@ -13,7 +13,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
-Visit the deployed application: 
+Visit the deployed application: https://oliviafaraone.github.io/Work-Day-Scheduler/
 
-Preview the site by viewinf the Site Image.png file in this repository.
+Preview the site by viewing the Site Image.png file in this repository.
  
