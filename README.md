@@ -13,5 +13,7 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 
-deployed application:
+Visit the deployed application: 
+
+Preview the site by viewinf the Site Image.png file in this repository.
  
